@@ -23,33 +23,47 @@ watchdog: 'http://[HOST]:[PORT:5000]/'
 init: false
 options:
   HA_BASE_URL: 'https://your-path-to-home-assistant:8123'
-  HA_SCREENSHOT_URL: '/lovelace/0'
   HA_ACCESS_TOKEN: ''
   LANGUAGE: 'en'
   CRON_JOB: '* * * * *'
-  RENDERING_TIMEOUT: '60000'
+  RENDERING_TIMEOUT: '30000'
   RENDERING_DELAY: '0'
+  HA_SCREENSHOT_URL: '/dashboard-kindle/0?kiosk'
   RENDERING_SCREEN_HEIGHT: '800'
   RENDERING_SCREEN_WIDTH: '600'
-  ROTATION: '0'
+  ROTATION: '90'
   SCALING: '1'
   GRAYSCALE_DEPTH: '8'
   COLOR_MODE: 'GrayScale'
+  HA_SCREENSHOT_URL_2: '/dashboard-eink/0?kiosk'
+  RENDERING_SCREEN_HEIGHT_2: '128'
+  RENDERING_SCREEN_WIDTH_2: '296'
+  ROTATION_2: '0'
+  SCALING_2: '1'
+  GRAYSCALE_DEPTH_2: '8'
+  COLOR_MODE_2: 'GrayScale'
   HA_BATTERY_WEBHOOK: ''
 schema:
   HA_BASE_URL: "url"
-  HA_SCREENSHOT_URL: "str"
   HA_ACCESS_TOKEN: "password"
   LANGUAGE: "str"
   CRON_JOB: "str"
   RENDERING_TIMEOUT: "int"
   RENDERING_DELAY: "int"
+  HA_SCREENSHOT_URL: "str"Í
   RENDERING_SCREEN_HEIGHT: "int"
   RENDERING_SCREEN_WIDTH: "int"
   ROTATION: "int"
   SCALING: "int"
   GRAYSCALE_DEPTH: "int"
   COLOR_MODE: "list(GrayScale|TrueColor)?"
+  HA_SCREENSHOT_URL_2: "str"Í
+  RENDERING_SCREEN_HEIGHT_2: "int"
+  RENDERING_SCREEN_WIDTH_2: "int"
+  ROTATION_2: "int"
+  SCALING_2: "int"
+  GRAYSCALE_DEPTH_2: "int"
+  COLOR_MODE_2: "list(GrayScale|TrueColor)?"
   HA_BATTERY_WEBHOOK: "str"
 environment:
   output_path: "/output/cover.png"
